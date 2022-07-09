@@ -25,7 +25,8 @@
         "react/jsx-filename-extension":"off",
         "import/no-unresolved":"off",
         "import/extensions":"off",
-        "no-param-reassign":"off"
+        "no-param-reassign":"off",
+        "consistent-return":"off"
 
         
     }

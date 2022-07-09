@@ -20,7 +20,7 @@ interface LoggingPayload {
   email: string
 }
 
-export const playerSlice = createSlice({
+const playerSlice = createSlice({
   name: 'player',
   initialState,
   reducers: {
@@ -29,5 +29,13 @@ export const playerSlice = createSlice({
       state.name = name;
       state.gravatarEmail = email;
     },
+    answerCorrect: (state, action: PayloadAction<number>) => {
+      state.score += action.payload;
+      state.assertions += 1;
+    },
   },
 });
+
+export const { loggingUser, answerCorrect } = playerSlice.actions;
+
+export default playerSlice.reducer;
